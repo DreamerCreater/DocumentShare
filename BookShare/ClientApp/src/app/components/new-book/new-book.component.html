@@ -1,4 +1,7 @@
 <div class="add-book">
+    <div *ngIf="showError" class="alert alert-danger" role="alert">
+ Book was not added to your library.Please, try again!
+    </div>
 <form [formGroup]="addBookForm" (ngSubmit)="onSubmit()">
     <div class = "form-group">
         <label for = "title" class="required" >Title</label>

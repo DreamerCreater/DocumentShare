@@ -12,6 +12,7 @@ import { DeleteBookComponent } from './components/delete-book/delete-book.compon
 import { NewBookComponent } from './components/new-book/new-book.component';
 import { ShowBookComponent } from './components/show-book/show-book.component';
 import { UpdateBookComponent } from './components/update-book/update-book.component';
+import { MyFinanceComponent } from './components/my-finance/my-finance.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UpdateBookComponent } from './components/update-book/update-book.compon
     DeleteBookComponent,
     NewBookComponent,
     ShowBookComponent,
-    UpdateBookComponent
+    UpdateBookComponent,
+    MyFinanceComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -35,7 +37,9 @@ import { UpdateBookComponent } from './components/update-book/update-book.compon
       { path: 'new-book', component: NewBookComponent },
       { path: 'update-book/:id', component: UpdateBookComponent },
       { path: 'delete-book/:id', component: DeleteBookComponent },
-      { path: 'show-book/:id', component: ShowBookComponent }
+      { path: 'show-book/:id', component: ShowBookComponent },
+      {path:'show-finance',component:MyFinanceComponent}
+     
     ])
   ],
   providers: [BookService],
